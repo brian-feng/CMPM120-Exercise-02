@@ -60,7 +60,7 @@ class Play extends Phaser.Scene {
          // text
          let textConfig = {
             fontFamily: 'Courier',
-            fontSize: '28px',
+            fontSize: '22px',
             backgroundColor: '#F3B141',
             color: '#843605',
             align: 'right',
@@ -71,7 +71,7 @@ class Play extends Phaser.Scene {
             fixedWidth: 0
         }
         this.thing = "Shots: " + this.shots.toString() + " | Score: " + this.score.toString() + " | Percentage: " + this.percentage.toString() + "%"
-        this.text = this.add.text(game.config.width / 30, game.config.height * 0.95, this.thing, textConfig).setOrigin(0, 0)
+        this.text = this.add.text(game.config.width / 35, game.config.height * 0.95, this.thing, textConfig).setOrigin(0, 0)
 
         // input
         this.input.on('pointerdown', (pointer) => {
