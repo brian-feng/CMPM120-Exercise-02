@@ -82,7 +82,7 @@ class Play extends Phaser.Scene {
             this.ball.body.setVelocityX(Phaser.Math.Between(this.SHOT_VELOCITY_X, this.SHOT_VELOCITY_X) * shotDirectionX)
             this.ball.body.setVelocityY(Phaser.Math.Between(this.SHOT_VELOCITY_Y_MIN, this.SHOT_VELOCITY_Y_MAX) * shotDirectionY)
             this.shots++
-            if(this.score != 0) this.percentage = this.score/this.shots * 100
+            if(this.score != 0) this.percentage = parseInt(this.score/this.shots * 100, 10)
             this.thing = "Shots: " + this.shots.toString() + " | Score: " + this.score.toString() + " | Percentage: " + this.percentage.toString() + "%"
             this.text.text = this.thing
         })
@@ -94,7 +94,7 @@ class Play extends Phaser.Scene {
             this.ball.setVelocityX(0)
             this.ball.setVelocityY(0)
             this.score++
-            if(this.score != 0) this.percentage = this.score/this.shots * 100
+            if(this.score != 0) this.percentage = parseInt(this.score/this.shots * 100, 10)
             this.thing = "Shots: " + this.shots.toString() + " | Score: " + this.score.toString() + " | Percentage: " + this.percentage.toString() + "%"
             this.text.text = this.thing
         })
